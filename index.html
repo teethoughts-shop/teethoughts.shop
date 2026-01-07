@@ -37,30 +37,37 @@
             max-width: 720px;
             padding: 40px 20px;
         }
-
 		.brand {
-		  font-family: "Playfair Display", serif; /* luxury feel */
+		  font-family: "Playfair Display", serif;
 		  font-weight: 500;
 		  text-align: center;
-		  letter-spacing: 0.35em;
-		  font-size: clamp(1.2rem, 5vw, 3rem);
-		  white-space: nowrap;
-		  margin: 0 auto;
+		
+		  /* Responsive font size */
+		  font-size: clamp(1.4rem, 6vw, 3rem);
+		
+		  /* Mobile-first spacing */
+		  letter-spacing: 0.18em;
+		
+		  /* Prevent overflow issues */
+		  max-width: 100%;
+		  word-break: break-word;
+		  overflow-wrap: anywhere;
 		}
 		
-		/* Small devices (phones) */
-		@media (max-width: 480px) {
+		/* Tablet */
+		@media (min-width: 600px) {
 		  .brand {
-		    letter-spacing: 0.25em;
+		    letter-spacing: 0.28em;
 		  }
 		}
 		
-		/* Medium devices (tablets) */
-		@media (max-width: 768px) {
+		/* Desktop */
+		@media (min-width: 1024px) {
 		  .brand {
-		    letter-spacing: 0.3em;
+		    letter-spacing: 0.35em;
 		  }
 		}
+
 
         .domain {
             font-size: 12px;
